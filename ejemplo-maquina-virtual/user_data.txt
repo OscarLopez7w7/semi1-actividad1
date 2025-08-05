@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euxo pipefail
+exec > /var/log/user-data.log 2>&1
+
+dnf update -y
+dnf install -y docker git
+
+systemctl enable docker
+systemctl start docker
+
+usermod -aG docker ec2-user
+
+cd /home/ec2-user
+sudo -u ec2-user git clone https://github.com/marckomatic/Seminario1_2S2025
+
+cd mi_aplicacion
+
+docker build -t mi_pagina:latest .
+docker run -d -p 80:80 mi_pagina:latest
