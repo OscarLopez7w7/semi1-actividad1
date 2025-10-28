@@ -39,7 +39,6 @@ El proyecto **MI CASITA** implementa una aplicación web de gestión de recetas 
 - **Frontend:** Se utilizó REACT y se alojo en una instancia de EC2.
 - **Backend (API):** Servidor Node.js y se alojo en una instancia de EC2.
 - **Base de Datos:** MySQL en Amazon RDS.
-- **Balanceador de Carga:** EC2 Load Balancer para distribuir peticiones entre APIs.
 - **Almacenamiento de archivos estáticos:** Se utilizó Amazon S3
 - **Notificación de ordenes:** Se utilizó Amazon Polly para marcar un pedido como "Listo" por medio de un texto y comunicar por audio a los meseros.
 - **Atención a turistas:** Se utilizó Amazon Translate para poder traducir el menú del restaurante para turistas en múltiples idiomas.
